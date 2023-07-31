@@ -144,7 +144,7 @@ func main() {
 	smoothedImage := applyGaussianBlur(backgroundRemovedImage, sigma)
 
 	// Dapatkan nama file output berikutnya dengan nomor increment jika file sudah ada
-	outputFilePath := getNextOutputFileName(outputFileName + ".png") // Change the output file extension to .png
+	outputFilePath := getNextOutputFileName(outputFileName) // Change the output file extension to .png
 	outputFile, err := os.Create(outputFilePath)
 	if err != nil {
 		log.Fatal(err)
